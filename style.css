@@ -298,13 +298,13 @@ button{
     justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
+    flex-wrap: wrap;
 }
 
 .app-download {
     display: flex;
     height: 3rem;
     width: 10rem;
-    background-size:contain;
 }
 
 .app-download img {
@@ -315,11 +315,34 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    flex-direction: column;
+    color: var(--line-or);
 }
 
-.footer-text {
-    margin-bottom: 52px;
+.footer-text a {
+    color: var(--line-or);
+    font-weight: 500;
+}
+
+.footer-text a:hover {
+    color: var(--blue)
+}
+
+
+.footer-networks {
+    display: flex;
+    padding: 10px 0 0 0;
+    justify-content: space-evenly;
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.footer-networks svg {
+    width: 30px;
+}
+
+.footer-networks svg:hover {
+    fill: var(--blue);
 }
 
 /* media queries */
