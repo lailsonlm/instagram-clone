@@ -407,8 +407,15 @@ footer {
         width: 100%;
     }
     
+}
+
+@media (max-width: 450px) {
+
     .group {
         border: 1px solid transparent;
     }
-}
 
+    .group-account {
+        border: 1px solid transparent;
+    }
+}
