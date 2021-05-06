@@ -12,10 +12,34 @@ const activeButton = () => {
     }
 }
 
-
 activeButton()
 loginUser.oninput=activeButton
 loginPassword.oninput=activeButton
+
+
+
+// Salvar estado do usuário - LocalStorage
+const nightModeStorage = localStorage.getItem('gmtNightMode')
+const nightMode = document.getElementById("night-mode")
+
+if(nightModeStorage) {
+    document.documentElement.classList.add('theme-dark')
+    nightMode.checked = true
+}
+
+// Ativando/Desativar Modo Noturno
+nightMode.addEventListener('click', () => {
+    document.documentElement.classList.toggle('theme-dark')
+
+    if(document.documentElement.classList.contains('theme-dark')) {
+        localStorage.setItem('gmtNightMode', true)
+        return
+    } else {
+        localStorage.removeItem('gmtNightMode')
+    }
+})
+
+
 
 
 
